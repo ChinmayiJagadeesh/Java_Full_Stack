@@ -21,7 +21,7 @@ public class PoolDemo {
 
             config.setJdbcUrl("jdbc:mysql://localhost:3306/college");
             config.setUsername("root");
-            config.setPassword("Root@123");
+            config.setPassword("root");// change if your MySQL password is different
 
             // Step 2: Pool settings
             config.setMaximumPoolSize(10);
