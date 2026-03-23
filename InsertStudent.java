@@ -16,7 +16,7 @@ public class InsertStudent {
             Connection con = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/SKIT",
                 "root",
-                "Root@123"
+                "root");// change if your MySQL password is different
             );
 
             String query = "INSERT INTO Students VALUES(?, ?, ?)";
