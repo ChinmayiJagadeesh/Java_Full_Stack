@@ -16,7 +16,7 @@ public class HospitalAppointement {
             Connection con = DriverManager.getConnection(
             "jdbc:mysql://localhost:3306/HospitalDB",
             "root",
-            "root");
+            "root");// change if your MySQL password is different
 
             CallableStatement cs = con.prepareCall("{call book_appointment(?,?,?)}");
 
