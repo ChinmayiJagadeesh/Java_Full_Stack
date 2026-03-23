@@ -14,7 +14,7 @@ public class LibraryDB {
 
     public static void main(String[] args) {
                // Connection String
-        String uri = "mongodb+srv://student_db_user:9KV9yURMlUp2s9Jn@cluster0.8dupopr.mongodb.net/";
+        String uri = System.getenv("MONGO_URI");
 
         // Connect
         MongoClient client = MongoClients.create(uri);
