@@ -13,7 +13,7 @@ public class FoodDelivarySystem {
 
         String url = "jdbc:mysql://localhost:3306/FoodDeliverySystem";
         String user = "root";
-        String password = "Root@123";   // change if your MySQL password is different
+        String password = "root";   // change if your MySQL password is different
 
         try {
 
