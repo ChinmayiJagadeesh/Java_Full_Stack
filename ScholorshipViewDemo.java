@@ -15,7 +15,7 @@ public class ScholorshipViewDemo {
             Connection con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/UniversityDataBase",
                     "root",
-                    "Root@123");
+                    "root");// change if your MySQL password is different
 
             Statement stmt = con.createStatement();
 
