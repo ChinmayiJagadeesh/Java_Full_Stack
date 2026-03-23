@@ -17,7 +17,7 @@ public class MetroManagement {
             Connection con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/MetroDatabase",
                     "root",
-                    "Root@123");
+                    "root");// change if your MySQL password is different
 
             Statement st = con.createStatement();
 
