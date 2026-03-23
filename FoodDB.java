@@ -14,7 +14,7 @@ public class FoodDB {
 
     public static void main(String[] args) {
 
-        String uri = "mongodb+srv://student_db_user:9KV9yURMlUp2s9Jn@cluster0.8dupopr.mongodb.net/";
+        String uri = System.getenv("MONGO_URI");
 
         MongoClient client = MongoClients.create(uri);
         MongoDatabase db = client.getDatabase("foodDB");
