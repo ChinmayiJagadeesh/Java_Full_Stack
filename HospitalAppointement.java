@@ -16,7 +16,7 @@ public class HospitalAppointement {
             Connection con = DriverManager.getConnection(
             "jdbc:mysql://localhost:3306/HospitalDB",
             "root",
-            "Root@123");
+            "root");
 
             CallableStatement cs = con.prepareCall("{call book_appointment(?,?,?)}");
 
