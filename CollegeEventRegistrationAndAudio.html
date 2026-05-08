@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Event Registration</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 30px;
+        }
+    </style>
+
+    <script>
+        function showSummary() {
+            let events = [];
+            if (document.getElementById("dance").checked) events.push("Dance");
+            if (document.getElementById("coding").checked) events.push("Coding");
+            if (document.getElementById("singing").checked) events.push("Singing");
+
+            document.getElementById("summary").innerText =
+                "Selected Events: " + events.join(", ");
+        }
+    </script>
+</head>
+
+<body>
+
+<h1>College Event Registration</h1>
+
+<h3>Listen to Invitation</h3>
+
+<audio controls>
+    <source src="sample.mp3" type="audio/mpeg">
+    Your browser does not support audio
+</audio>
+
+<hr>
+
+<form onsubmit="showSummary()">
+
+    Student Name:
+    <input type="text" required><br><br>
+
+    Email:
+    <input type="email" pattern=".+@.+\..+" required><br><br>
+
+    Department:
+    <input type="text" required><br><br>
+
+    Select Events:<br>
+    <input type="checkbox" id="dance"> Dance<br>
+    <input type="checkbox" id="coding"> Coding<br>
+    <input type="checkbox" id="singing"> Singing<br><br>
+
+    Upload Performance:
+    <input type="file" accept=".mp3, .mp4"><br><br>
+
+    <input type="submit">
+    <input type="reset">
+
+</form>
+
+<p id="summary"></p>
+
+</body>
+</html>

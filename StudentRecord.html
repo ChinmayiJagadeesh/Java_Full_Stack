@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Record Management</title>
+
+     <link rel="icon" href="data:,">
+     
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 40px;
+        }
+
+        input {
+            padding: 8px;
+            width: 200px;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Record Management</h1>
+
+    <script src="StudentRecord.js"></script>
+
+    <!-- Input -->
+    <input type="text" id="studentName" placeholder="Enter student name">
+
+    <!-- Add Button -->
+    <button onclick="addStudent()">Add Student</button>
+
+    <!-- Student List -->
+    <ul id="studentList"></ul>
+
+    <script>
+
+        let students = [];
+
+        // Add Student
+        function addStudent() {
+
+            let name =
+                document.getElementById("studentName").value;
+
+            if (name.trim() !== "") {
+
+                students.push(name);
+
+                displayStudents();
+
+                document.getElementById("studentName").value = "";
+            }
+        }
+
+        // Delete Student
+        function deleteStudent(index) {
+
+            students.splice(index, 1);
+
+            displayStudents();
+        }
+
+        // Display Students
+        function displayStudents() {
+
+            let list =
+                document.getElementById("studentList");
+
+            list.innerHTML = "";
+
+            students.forEach((student, index) => {
+
+                list.innerHTML += `
+                    <li>
+                        ${student}
+
+                        <button onclick="deleteStudent(${index})">
+                            Delete
+                        </button>
+                    </li>
+                `;
+            });
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+body {
+    background: lightblue;
+    font-family: Arial;
+}
+
+.box {
+    background: lightgray;
+    padding: 15px;
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Input</title>
+</head>
+<body>
+
+<input type="text" id="name" placeholder="Enter text">
+
+<button onclick="showText()">Show</button>
+
+<h2 id="output"></h2>
+
+<script>
+function showText() {
+    let value = document.getElementById("name").value;
+
+    document.getElementById("output").innerHTML = value;
+}
+</script>
+
+</body>
+</html>

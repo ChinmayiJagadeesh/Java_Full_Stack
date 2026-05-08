@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fitness Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 30px;
+        }
+
+        input, select {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Fitness Registration Form</h1>
+
+<form>
+
+    Name:
+    <input type="text" name="name" required><br>
+
+    Age:
+    <input type="number" name="age" min="16" required><br>
+
+    Gender:
+    <input type="radio" name="gender" required> Male
+    <input type="radio" name="gender"> Female<br><br>
+
+    Fitness Goal:
+    <select required>
+        <option value="">Select</option>
+        <option>Weight Loss</option>
+        <option>Muscle Gain</option>
+        <option>Flexibility</option>
+    </select><br>
+
+    Preferred Workout Time:
+    <input type="time" required><br>
+
+    <input type="checkbox" required> I agree to health terms<br><br>
+
+    <input type="submit">
+    <input type="reset">
+
+</form>
+
+<hr>
+
+<h2>Workout Videos</h2>
+
+<!-- YouTube Video 1 -->
+<iframe width="300" height="200"
+src="https://www.youtube.com/embed/UItWltVZZmE"
+title="Workout Video"></iframe>
+
+<!-- YouTube Video 2 -->
+<iframe width="300" height="200"
+src="https://www.youtube.com/embed/ml6cT4AZdqI"
+title="Workout Video"></iframe>
+
+</body>
+</html>
